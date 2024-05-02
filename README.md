@@ -2,18 +2,18 @@
 
 :warning: Everything between << >> needs to be replaced (remove << >> after replacing)
 
-# Online Recipe Book
+# Air Hoceky Mania
 ## CS110 Final Project Spring 2024
 
 ## Team Members
 
-- [Replace with your team members]
+- Julian Bakula and Daniel Sirota
 
 ***
 
 ## Project Description
 
-The Online Recipe Book is a web-based application where users can search, save, and share recipes. It allows users to browse through a vast collection of recipes, filter them based on various criteria such as cuisine type, ingredients, cooking time, etc. Users can also save their favorite recipes to their profile for quick access and share recipes with friends via social media platforms.
+The project is a simulation of a simple and well known arcade name known as air hockey. Two players use bumpers on an icey surface to knock a puck around within a rectangular space until the puck goes past either player's bumper. They would the restart playing until somebody scores three times. The winner is declared and they can play as many times they want until they are happy with the result.
 
 ***    
 
@@ -31,28 +31,80 @@ The Online Recipe Book is a web-based application where users can search, save, 
 
 ### Features
 
-1. User registration and authentication system.
-2. Browse and search functionality for recipes.
-3. Filter recipes by cuisine type, ingredients, cooking time, etc.
-4. Save favorite recipes to user profile.
-5. Share recipes via social media platforms.
+1. Home Screen
+2. Game Screen Including Score
+3. Bumpers
+4. Puck
 
 ### Classes
 
-- User: Manages user authentication and profile information.
-- Recipe: Represents individual recipes with details such as ingredients, cooking instructions, and image.
-- RecipeManager: Handles the retrieval, filtering, and saving of recipes.
-- DatabaseConnector: Connects the application to the backend database to store and retrieve user and recipe data.
+-Puck: The Puck class creates the puck and takes in three arguments (the x location, the y location, and the radius). This class also has a method that moves the puck across the screen and a reset method that resets the puck to the middle of the screen.
+
+-Bumper: The Bumper class creates a bumper and takes in multiple arguments (the x location, the y location, the color of the bumper, the width of the bumper, and the height of the bumper). The bumper has a move method that moves right when the direction that it takes in is "right" and left when the direction is "left". The Bumper class also has a reset method that resets the bumper to its starting position.
+
+-Controller: The Controller class creates the entire program and puts all of the different classes together so they have a purpose and use. The Controller class has the following methods:
+
+    init(): Initializes all of the objects and variables used in the program.
+
+    startscreenloop(): Creates the home screen with all of the information on the screen that opens right when the program is ran.
+
+    score(): Responsible for displaying the score on the screen.
+
+    gameloop(): Creates and organizes everything that is used in the actual game. This includes but is not limited to drawing the game board, accounting for collisions between the puck, bumper, and walls, and changing the score when a goal is scored.
+
+    endscreenloop(): Creates the end screen that displays the winner of the game and the final score when one of the teams reaches the maximum score.
+
+    mainloop(): Responsible for changing the screens based on what state the program is in.
+
+-Screen: The Screen class creates multiple various screens throughout the game. The class has the following methods:
+    init(): initializes the window necessary for any screen to be displayed
+
+    startscreen(): displays a starter screen that displays the instructions as well as the name of the game
+
+    gamescreen(): displays the screen on which the game itself is played and draws a line through the middle of the screen as part of the game screen
+
+    endscreen(): displays a screen signifying that the game is over and displays the winner as well as the final score of the game
+
 
 ## ATP
 
-| Step                 | Procedure                                 | Expected Results                      |
-|----------------------|-------------------------------------------|---------------------------------------|
-|  1                   | Run Application                           | Login/Register page displayed         |
-|  2                   | Register new user                         | User registered successfully          |
-|  3                   | Login with registered credentials        | User logged in                        |
-|  4                   | Search for a recipe                       | List of recipes matching search query |
-|  5                   | Filter recipes by cuisine type           | Display recipes of selected cuisine   |
-|  6                   | Save a recipe to user profile            | Recipe added to user's favorites      |
-|  7                   | Share a recipe via social media          | Recipe shared successfully           |
+Test Case #1: Bumper Movement 
+Check to see if the bumpers slide left and right as intended.
 
+
+Steps to Test: Launch the software. To start the game, press the Space Bar. Press the arrow key to the right. Make sure the right-hand blue bumper moves. On the left arrow key, press. Make sure the left-hand blue bumper moves. Press the "d" key. Check to see if the red bumper shifts right. Press the "a" key. Make sure the left-hand red bumper moves.
+
+
+Anticipated Result: In reaction to keyboard key inputs, the bumpers ought should shift to the left and right.
+
+
+Test Case #2: Hitting the Bumper
+Check that the puck bounces off the bumpers in this test description.
+
+Steps to Test: Launch the software. To start the game, press the Space Bar. To start the game, press the Space Bar. To make the puck bounce off the first bumper, move it. Make sure the puck bounces off the bumper by checking. To make the puck bounce off this bumper, move the other bumper. Check to make sure the puck bounces off this bumper.
+
+Expected Result: The puck should bounce off each bumper when the space bar is first pressed.
+
+
+Test Case #3: The Direction and Overall Movement of the Puck
+Check to see if the puck moves on the screen accurately at first.
+
+Steps to Test: Launch the software. To start the game, press the Space Bar. To start the game, press the Space Bar. Never adjust the bumpers or paddles. Make sure the puck is moving on the screen.
+
+Expected Result: Depending on how the puck bounces off the bumpers, it should travel across the screen when the space bar is first pressed.
+
+
+Test Case #4: The Ending After Someone Scores 3 Points
+Verify that the screen transitions to the final screen upon a player's achievement of three goals in the test description.
+
+Steps to Test: Launch the software. To start the game, press the Space Bar. To start the game, press the Space Bar. Continue playing until a player reaches three points. Make sure the final score and the player who won the game appear on the screen.
+
+Anticipated Result: The ultimate score and the player who won the game are displayed on the screen after a player reaches three points.
+
+
+Test Case #5: The Scoring System of the Game
+Test description: Verify that if a goal is scored, all the necessary adjustments are made.
+
+Steps to Test: Launch the software. To start the game, press the Space Bar. To start the game, press the Space Bar. Permit the puck to go through a bumper. Check to see if the score of the other player rises by one. Make sure the puck returns to the center of the screen, just as it did when the game started. To start the game again, press Space Bar. Permit the puck to get beyond the opposing bumper. Check to see if the score of the other player rises by one. Make sure the puck returns to the center of the screen, just as it did when the game started.
+
+Anticipated Result: The puck resets to the center of the screen, just as it did at the start of the game, and the opposing player's score increases by one when it passes a bumper.
