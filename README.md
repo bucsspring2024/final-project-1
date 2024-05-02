@@ -28,7 +28,7 @@ The project is a simulation of a simple and well known arcade name known as air 
 
 ### Final Design
 
-![final gui](assets/Running_Program.png)
+![final gui](assets/final_gui_design.png)
 
 ## Program Design
 
