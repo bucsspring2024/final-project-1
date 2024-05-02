@@ -41,11 +41,11 @@ The project is a simulation of a simple and well known arcade name known as air 
 
 ### Classes
 
--Puck: The Puck class creates the puck and takes in three arguments (the x location, the y location, and the radius). This class also has a method that moves the puck across the screen and a reset method that resets the puck to the middle of the screen.
+- Puck: The puck class creates the puck and takes in three arguments (x location, y location, and radius). This class also has a method that moves the puck across the screen and a reset method that resets the puck to the middle of the screen.
 
--Bumper: The Bumper class creates a bumper and takes in multiple arguments (the x location, the y location, the color of the bumper, the width of the bumper, and the height of the bumper). The bumper has a move method that moves right when the direction that it takes in is "right" and left when the direction is "left". The Bumper class also has a reset method that resets the bumper to its starting position.
+- Bumper: The bumper class creates a bumper and takes in multiple arguments (x location,y location, the color of the bumper, the width of the bumper, and the height of the bumper). The bumper has a move method that moves right when the direction that it takes in is "right", left when the direction is "left", up when the direction is "up", and down when the direction is "down". The Bumper class also has a reset method that resets the bumper to its starting position.
 
--Controller: The Controller class creates the entire program and puts all of the different classes together so they have a purpose and use. The Controller class has the following methods:
+- Controller: The Controller class creates the entire program and puts all of the different classes together so they have a purpose and use. The Controller class has the following methods:
 
     init(): Initializes all of the objects and variables used in the program.
 
@@ -53,30 +53,29 @@ The project is a simulation of a simple and well known arcade name known as air 
 
     score(): Responsible for displaying the score on the screen.
 
-    gameloop(): Creates and organizes everything that is used in the actual game. This includes but is not limited to drawing the game board, accounting for collisions between the puck, bumper, and walls, and changing the score when a goal is scored.
+    ameloop(): Creates and organizes everything that is used in the actual game. This includes but is not limited to drawing the game board, accounting for collisions between the puck, bumper, and walls, and changing the score when a goal is scored.
 
     endscreenloop(): Creates the end screen that displays the winner of the game and the final score when one of the teams reaches the maximum score.
 
     mainloop(): Responsible for changing the screens based on what state the program is in.
 
--Screen: The Screen class creates multiple various screens throughout the game. The class has the following methods:
+- Screen: The screen class creates multiple various screens throughout the game. The class has the following methods: 
+
     init(): initializes the window necessary for any screen to be displayed
 
-    startscreen(): displays a starter screen that displays the instructions as well as the name of the game
+    startscreen(): displays the starter screen that displays the instructions as well as the name of the game
 
-    gamescreen(): displays the screen on which the game itself is played and draws a line through the middle of the screen as part of the game screen
+    gamescreen(): displays the creen on which the game itself is played and draws a line through the middle of the screen as part of the game screen
 
-    endscreen(): displays a screen signifying that the game is over and displays the winner as well as the final score of the game
+    endscreen(): displayes a screen signifying that the game is over and displays the winner of the game as well as the final score of the game
 
 
 ## ATP
 
 Test Case #1: Bumper Movement 
-Check to see if the bumpers slide left and right as intended.
+Check to see if the bumpers slide left, right, up and down as intended.
 
-
-Steps to Test: Launch the software. To start the game, press the Space Bar. Press the arrow key to the right. Make sure the right-hand purple bumper moves. On the left arrow key, press. Make sure the left-hand purple bumper moves. Press the "d" key. Check to see if the green bumper shifts right. Press the "a" key. Make sure the left-hand green bumper moves.
-
+Steps to Test: Launch the software. To start the game, press the Space Bar. Press the arrow key to the right. Make sure the purple bumper moves. On the left arrow key, press. Press the upward arrow key. Make sure the purple bumper moves up. Press the downward arrow key. Make sure the purple bumper moves down. Make sure the  purple bumper moves down. Press the "d" key. Check to see if the green bumper shifts right. Press the "a" key. Make sure the green bumper moves left. Press the "w" key. Make sure the green bumper moves up. Press the "s" key. Make sure the green bumper moves down. 
 
 Anticipated Result: In reaction to keyboard key inputs, the bumpers ought should shift to the left and right.
 
