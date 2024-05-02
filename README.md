@@ -24,11 +24,11 @@ The project is a simulation of a simple and well known arcade name known as air 
 
 ### Initial Design
 
-![initial gui](assets/gui.jpg)
+![initial gui](assets/Original_Drawing.png)
 
 ### Final Design
 
-![final gui](assets/finalgui.jpg)
+![final gui](assets/Running_Program.png)
 
 ## Program Design
 
