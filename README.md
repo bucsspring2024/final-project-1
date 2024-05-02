@@ -75,7 +75,7 @@ Test Case #1: Bumper Movement
 Check to see if the bumpers slide left and right as intended.
 
 
-Steps to Test: Launch the software. To start the game, press the Space Bar. Press the arrow key to the right. Make sure the right-hand blue bumper moves. On the left arrow key, press. Make sure the left-hand blue bumper moves. Press the "d" key. Check to see if the red bumper shifts right. Press the "a" key. Make sure the left-hand red bumper moves.
+Steps to Test: Launch the software. To start the game, press the Space Bar. Press the arrow key to the right. Make sure the right-hand purple bumper moves. On the left arrow key, press. Make sure the left-hand purple bumper moves. Press the "d" key. Check to see if the green bumper shifts right. Press the "a" key. Make sure the left-hand green bumper moves.
 
 
 Anticipated Result: In reaction to keyboard key inputs, the bumpers ought should shift to the left and right.
@@ -92,7 +92,7 @@ Expected Result: The puck should bounce off each bumper when the space bar is fi
 Test Case #3: The Direction and Overall Movement of the Puck
 Check to see if the puck moves on the screen accurately at first.
 
-Steps to Test: Launch the software. To start the game, press the Space Bar. To start the game, press the Space Bar. Never adjust the bumpers or paddles. Make sure the puck is moving on the screen.
+Steps to Test: Launch the software. To start the game, press the Space Bar. To start the game, press the Space Bar. Never adjust the bumpers. Make sure the puck is moving on the screen.
 
 Expected Result: Depending on how the puck bounces off the bumpers, it should travel across the screen when the space bar is first pressed.
 
